@@ -133,10 +133,8 @@ threads<<storage_manager
 wfcontroller = WordFrequencyController.new
 send_message(wfcontroller, ['run', storage_manager])
 threads<<wfcontroller
-# Wait for the active objects to finish
+
 
 threads.each {|thread|
    thread.join
 }
-
-# a.join

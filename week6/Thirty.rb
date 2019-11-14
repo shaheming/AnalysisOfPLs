@@ -2,9 +2,7 @@
 require 'set'
 
 
-def read_file(path)
-  File.open(path).read
-end
+
 
 def split_words(str)
   def _scan(str)
@@ -39,6 +37,11 @@ end
 def sort(word_freq)
   word_freq.sort_by{|word,freq| -freq}
 end
+
+def read_file(path)
+  File.open(path).read
+end
+
 splits = partition(read_file(ARGV[0]),200).map{|text| split_words(text)}
 
 word_freqs = sort(splits.inject {|memo, values| count_words(memo, values)})

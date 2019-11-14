@@ -1,0 +1,1 @@
+find ./ -name "*.rb" | xargs -I {} sudo chmod +x {}

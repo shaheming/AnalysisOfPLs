@@ -1,11 +1,6 @@
 #!/usr/local/bin/ruby
 require 'set'
 
-
-#!/usr/local/bin/ruby
-require 'set'
-
-
 def getFilePath(argv)
   if argv.length != 1
     puts "Please input file name"
@@ -39,18 +34,18 @@ end
 
 def frequencies(path)
   assertFileExist(path)
-  dict = Hash.new(0)
+   dict = Hash.new(0)
   File.open(path) do |f|
 
     words = scan(filterCharsAndNormalize(f.read))
     stopWordsSet=getStopWordsSet("../stop_words.txt")
-
+   
     words.each do |word|
       if !stopWordsSet.include?(word)
         dict[word]+=1
       end
 
-
+      
     end
   end
   dict

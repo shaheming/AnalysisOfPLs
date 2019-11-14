@@ -25,21 +25,26 @@ def partition(str,n)
   end
 end
 
-def count_words(pairs_list_1, pairs_list_2)
-  mapping = Hash.new(0)
-  pairs_list_1.each do |k,v|
-    mapping[k]+=v
-  end
-  pairs_list_2.each do |k,v|
-    mapping[k]+=v
-  end
-  mapping.to_a
+def count_words(mapping)
+  [mapping[0],mapping[1].map{|map| map[1]}.reduce(:+)]
 end
 
 def sort(word_freq)
   word_freq.sort_by{|word,freq| -freq}
 end
-splits = partition(read_file(ARGV[0]),200).map{|text| split_words(text)}
 
-word_freqs = sort(splits.inject {|memo, values| count_words(memo, values)})
+
+def regroup(pairs_list)
+  mapping = {}
+  pairs_list.each do |pairs|
+    pairs.each  do |pair|
+     ( mapping[pair[0]] ||= []) << pair
+    end
+  end
+  mapping
+end
+
+splits = partition(read_file(ARGV[0]),200).map{|text| split_words(text)}
+splits_per_word = regroup(splits)
+word_freqs = sort(splits_per_word.to_a.map {|split| count_words(split)})
 word_freqs[0..24].each{|freq|  puts "#{freq[0]}  -  #{ freq[1] }"}

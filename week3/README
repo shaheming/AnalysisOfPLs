@@ -1,0 +1,5 @@
+Name: Heming Sha
+How To Run Code:
+A: python3 Seven.py ../pride-and-prejudice.txt
+B: ./Eight.rb ../pride-and-prejudice.txt
+C: ./Nine.rb ../pride-and-prejudice.txt

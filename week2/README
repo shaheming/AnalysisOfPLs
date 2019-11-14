@@ -1,0 +1,5 @@
+Name: Heming Sha
+How To Run Code:
+
+./Five.rb ../pride-and-prejudice.txt
+./Six.rb ../pride-and-prejudice.txt
