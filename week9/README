@@ -1,0 +1,9 @@
+1) [Level: easy]
+ $ python 9_1.py ../pride-and-prejudice.txt
+
+
+Use the normalize dnn model to normalize the input line.
+Program an another model by modify the normalize model which map the stop words to ""
+
+2) [Level: moderate]
+  $ python 9_2.py ../pride-and-prejudice.txt
