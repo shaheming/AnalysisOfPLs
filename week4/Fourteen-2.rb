@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby
+#!/usr/bin/ruby2.5
 require 'set'
 
 class WordFrequencyFramework
@@ -107,7 +107,7 @@ class WordWithZCounter
   end
 
   def __print_z_count
-      puts "Words with count #{@word_with_z_count}"
+      puts "\nWords with count: #{@word_with_z_count}\n"
   end
 end
 wfapp = WordFrequencyFramework.new()

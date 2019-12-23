@@ -1,0 +1,8 @@
+Name: Heming Sha
+How To Run Code:
+12.1: ./Twelve-1.rb ../pride-and-prejudice.txt
+12.2: ./Twelve-2.rb ../pride-and-prejudice.txt
+12.3: ./Twelve-3.rb ../pride-and-prejudice.txt
+
+14.1: ./Fourteen-1.rb ../pride-and-prejudice.txt
+14.2: ./Fourteen-2.rb ../pride-and-prejudice.txt

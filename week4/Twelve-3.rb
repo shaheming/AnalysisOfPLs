@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby
+#!/usr/bin/ruby2.5
 require 'set'
 
 def extract_words(obj,path_to_file)
@@ -20,6 +20,7 @@ end
 def increment_count(obj,w)
   obj[:freqs][w] += 1
 end
+
 
 
 data_storage_obj = Hash.new.yield_self {|this|
