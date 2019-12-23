@@ -5,11 +5,16 @@
 
 
 #### [Five.rb](./week2/Five.rb) pipline
+- Larger problem is decomposed using functionl abstraction. Functions take input, and produce output.
+- No shared state between functions.
+- The larger problem is solved by composing functions one after the other, in pipeline, as a faithful reproduction of mathematical function compo- sition f ◦ g.
 
 #### [Five.rb](./week2/Six.rb) Code Golf.
- As few lines of code as possible.
+ - As few lines of code as possible.
+
 #### [Eight.rb](./week3/Seven.py) Lambda
-Lambda
+- Functional programming
+
 #### [Eight.rb](./week3/Eight.rb)
  Kick Forward
 - Each function takes an additional parameter, usually the last, which is another function.
